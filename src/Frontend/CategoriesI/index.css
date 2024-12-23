@@ -1,0 +1,117 @@
+/* General styles (unchanged for desktop/laptops) */
+.testimonials-container {
+  padding: 10px;
+  height: 110vh;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-top: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: black;
+  line-height: 1.6;
+}
+
+/* YouTube Shorts Container */
+.youtube-shorts-container {
+  display: grid;
+  margin-left: 300px;
+  margin-right: 300px;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px;
+  justify-items: center;
+}
+
+/* YouTube Short */
+.youtube-short {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Fixed height for uniformity */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-short iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.youtube-title {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: black;
+}
+
+/* YouTube Short with title wrapper */
+.youtube-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1024px) {
+  .testimonials-container {
+    height: auto; /* Adjust height to content */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h3 {
+    font-size: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .youtube-shorts-container {
+    width: 95%; /* Full width */
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 80px;
+    flex-direction: column; /* Stack videos and titles vertically */
+    align-items: center;
+    gap: 60px; /* Add space between videos and titles */
+  }
+
+  .youtube-item {
+    width: 90%; /* Adjust width to fit screen */
+    height: auto; /* Let the height be flexible */
+  }
+
+  .youtube-short {
+    width: 100%; /* Ensure videos take full width */
+    height: 400px; /* Increased height for smaller screens */
+  }
+
+  .youtube-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}

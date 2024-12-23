@@ -1,0 +1,208 @@
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1d1d;
+    padding: 40px;
+    border-top: 2px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center; 
+    height: 40%;
+}
+
+/* Row Container */
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    margin-bottom: 30px; /* Space between rows and bottom */
+    width: 80%; /* Ensures row takes full width */
+}
+
+/* Left Column */
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.footerI-container {
+    max-width: 400px;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-small-img {
+    width: 200px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #e4dfdf;
+}
+
+/* Right Column */
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    padding-left: 20px;
+    text-align: center; /* Center text in the right column */
+}
+
+.footer-section {
+    padding: 5px;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: red;
+}
+
+.footer-link {
+    display: block;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #9e2e2e;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.8rem;
+    border-top: 2px solid #777;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 250px;
+    margin-right: 350px;
+    padding-right: 10px; /* Optional: add a little padding to prevent text from touching */
+}
+.footer-bottom span{
+    color: red;
+}
+/* Responsive Design for Smaller Devices */
+@media only screen and (max-width: 1024px) {
+    .footer-container {
+      flex-direction: column; /* Display containers in column direction */
+      align-items: center; /* Center align items */
+      padding: 20px; /* Adjust padding for smaller screens */
+      height: auto; /* Adjust height for smaller devices */
+    }
+  
+    .footer-row {
+      flex-direction: column; /* Stack items vertically */
+      width: 100%; /* Take full width of the screen */
+      margin-bottom: 20px; /* Reduce bottom margin for smaller screens */
+    }
+  
+    .footer-left, .footer-right {
+      width: 100%; /* Full width for both columns */
+      text-align: center; /* Center text for smaller devices */
+      padding: 10px 0; /* Add vertical padding */
+    }
+  
+    .footerI-container {
+      max-width: 100%; /* Ensure it takes full width */
+      margin-bottom: 20px; /* Add spacing between sections */
+    }
+  
+    .footer-logo {
+      width: 120px; /* Adjust logo size for smaller screens */
+    }
+  
+    .footer-description {
+      font-size: 0.8rem; /* Adjust font size for readability */
+    }
+  
+    .footer-small-img {
+      width: 180px; /* Adjust size of the Play Store image */
+    }
+  
+    .footer-social-icons {
+      justify-content: center; /* Center align social icons */
+    }
+  
+    .social-icon {
+      font-size: 1.2rem; /* Reduce icon size slightly */
+    }
+  
+    .footer-right {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center; /* Center align sections */
+      gap: 20px; /* Add spacing between sections */
+    }
+  
+    .footer-section {
+      width: 100%; /* Ensure sections take full width */
+      margin-bottom: 20px; /* Add spacing between sections */
+      text-align: center; /* Center align section text */
+    }
+  
+    .footer-section h3 {
+      font-size: 1.5rem; /* Adjust heading size */
+    }
+  
+    .footer-link {
+      font-size: 1rem; /* Adjust link font size */
+    }
+  
+    .footer-bottom {
+      flex-direction: column; /* Stack footer-bottom items vertically */
+      align-items: center; /* Center align text */
+      text-align: center; /* Center align content */
+      margin: 10px 0; /* Adjust margins */
+    }
+  
+    .footer-bottom p {
+      font-size: 0.8rem; /* Adjust font size for smaller screens */
+      margin: 5px 0; /* Add vertical spacing */
+    }
+  }
+  

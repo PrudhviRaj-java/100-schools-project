@@ -1,0 +1,91 @@
+/* Carousel container styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Default height */
+  overflow: hidden;
+}
+
+/* Image styles */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  display: block;
+}
+
+/* Dots Container styles */
+.dots-container {
+  position: absolute;
+  bottom: 10px; /* Position dots inside the image area */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px; /* Reduced gap for smaller devices */
+  z-index: 10; /* Ensure dots are above the image */
+  padding: 5px 10px; /* Add padding for a neat appearance */
+  border-radius: 20px; /* Round background corners */
+  background: rgba(0, 0, 0, 0.4); /* Add semi-transparent background to dots */
+  border-radius: 50px;
+}
+
+/* Dot styles */
+.dot {
+  width: 8px; /* Adjusted size */
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.7); /* Lighter dots for better contrast */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+  background-color: white; /* Active dot is white */
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) { /* Tablets */
+  .carousel-container {
+    height: 16vh;
+  }
+  .carousel-image {
+    object-fit: contain; /* Allows images to fit fully within container */
+  }
+  .dots-container {
+    bottom: 15px; /* Adjusted for inside positioning */
+    gap: 4px;
+    padding: 3px 6px; /* Adjust padding */
+    background: rgba(0, 0, 0, 0.5); /* Darker background for better visibility */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile Phones */
+  .carousel-container {
+    height: 12vh; /* Reduced height for smaller screens */
+  }
+  .dots-container {
+    bottom: 10px; /* Positioned inside the image */
+    gap: 3px; /* Further reduced gap */
+    padding: 3px 6px; /* Adjust padding */
+    background: rgba(0, 0, 0, 0.5); /* Darker background for better visibility */
+  }
+  .dot {
+    width: 6px; /* Smaller dot size */
+    height: 6px;
+  }
+}
+
+/* Adding scroll functionality */
+.carousel-container {
+  overflow-x: scroll; /* Allow horizontal scrolling for smaller screens */
+  scroll-snap-type: x mandatory; /* Smooth scroll snapping */
+}
+
+.carousel-image {
+  scroll-snap-align: center; /* Snap each image to center */
+}

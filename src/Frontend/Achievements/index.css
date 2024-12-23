@@ -1,0 +1,190 @@
+/* Main Container */
+.achievements-container {
+  background: linear-gradient(135deg, #1e90ff, #32cd32);
+  padding: 20px;
+  width: 100%;
+  color: white;
+}
+
+/* Header Section */
+.achievements-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.achievements-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.achievements-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.achievements-header p {
+  font-size: 1.1rem;
+  color: black;
+}
+
+.achievements-header span {
+  color: red;
+}
+
+/* Small Containers */
+.small-containers {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* Default: 3 columns for desktop */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container1,
+.left-container2,
+.right-container1,
+.right-container2,
+.middle-container {
+  display: flex;
+  background-color: white;
+  width: 60vh; /* Default width for desktop */
+  height: 25vh; /* Default height for desktop */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.left-container1 {
+  margin-left: 41%;
+}
+
+.left-container2 {
+  margin-left: 41%;
+}
+
+.middle-container {
+  margin-left: 70%;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  color: rgb(27, 23, 23);
+}
+
+.left-section h3 {
+  font-size: 1.6rem;
+  margin: 5px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  font-size: 4.5rem;
+  color: black;
+  width: 80px;
+  height: 80px;
+  border-radius: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+}
+
+/* Divider */
+.divider {
+  width: 2px;
+  background-color: rgb(12, 11, 11);
+  position: absolute;
+  top: 10%;
+  left:32%;
+  bottom: 10%;
+}
+
+/* Right Section */
+.right-section {
+  flex: 2;
+  padding: 5px;
+  color: black;
+}
+
+.right-section h3,
+.right-section h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.right-section p {
+  font-size: 0.9rem;
+}
+
+.right-section span {
+  color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .small-containers {
+    display: flex;
+    flex-direction: column; /* Stack all containers vertically */
+    gap: 20px;
+  }
+
+  .left-container1,
+  .left-container2,
+  .right-container1,
+  .right-container2,
+  .middle-container {
+    width: 90%; /* Full width for smaller screens */
+    height: auto; /* Flexible height for content */
+    margin: 0 auto; /* Center align */
+  }
+
+  /* Divider adjustments for each container on smaller screens */
+  .left-container1 .divider {
+    left: 38%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .right-container1 .divider {
+    left: 53%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .left-container2 .divider {
+    left: 47%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .right-container2 .divider {
+    left: 47%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .middle-container .divider {
+    left: 49%;
+    top: 0;
+    bottom: 0;
+  }
+
+  /* Order of Containers */
+  .left-container1:nth-child(1),
+  .right-container1:nth-child(2),
+  .left-container2:nth-child(3),
+  .right-container2:nth-child(4),
+  .middle-container {
+    order: initial; /* Maintain the order for smaller screens */
+  }
+}

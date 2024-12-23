@@ -1,0 +1,141 @@
+/* Main container to center the content */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #f9f9f9;
+}
+
+/* Container for Row 1 */
+.row1-container {
+  width: 40%;
+  display: flex;
+  margin-left: 250px;
+  justify-content: center;
+}
+
+/* Row 1 styles - Use column direction */
+.row1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 90px;
+  text-align: center;
+}
+
+.row1 h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+.row1 span {
+  color: red;
+}
+
+.row1 h2 {
+  font-size: 2rem;
+  margin-right: 120px;
+  font-weight: normal;
+  color: #555;
+}
+
+/* Container for Row 2 */
+.row2-container {
+  width: 40%;
+  margin-right: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Row 2 styles - Use column direction */
+.row2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.row2 p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  width: 80%;
+}
+
+/* Stats container styles - Keep this row with flexbox for alignment */
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  width: 70%;
+}
+
+/* Individual stat box styles */
+.stat-box {
+  width: 30%;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-box .icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Media queries for mobile, tablets, and iPads */
+@media screen and (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .row1-container, .row2-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .row1, .row2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .row1 h1 {
+    font-size: 2.5rem;
+  }
+
+  .row1 h2 {
+    margin-right: 0;
+    font-size: 1.5rem;
+  }
+
+  .row2 p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .stat-box {
+    width: 90%;
+  }
+}

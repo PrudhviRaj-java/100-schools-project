@@ -1,0 +1,196 @@
+/* General Styles */
+.features-container {
+    width: 100%;
+    margin-top: 120px; /* Desktop top margin */
+    background-color: #fff9eb;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .heading-container {
+    flex: 1 1 50%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .heading-container h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .heading-container h1 {
+    font-size: 4rem;
+    color: #222;
+    margin: 10px 0;
+  }
+  .heading-container span {
+    color: red;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  /* Image Container */
+  .image-container {
+    flex: 1 1 50%; /* Left side row container */
+    text-align: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    margin-left: 200px;
+    margin-top: 70px;
+    height: auto;
+  }
+  
+  /* Data Container */
+  .data-container {
+    display: flex;
+    flex-direction: column; /* Stack sub-containers vertically */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Right Side Column (Heading, Passage, and Sub-Containers) */
+  .right-column {
+    flex: 1 1 50%; /* Right side row container */
+  }
+  
+  /* Column */
+  .column {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: column; /* Ensure vertical stacking */
+  }
+  
+  .column .sub-containerI,
+  .column .sub-containerII {
+    display: flex;
+    align-items: center;
+    width: 45vh;
+    justify-content: flex-start;
+    background-color: #f3f3f3; /* Default background color for the container */
+    padding: 10px;
+    margin-bottom: 20px; /* Space between sub-containers */
+    border-radius: 15px;
+    flex: 1 1 100%; /* Ensure each container takes full width in the column */
+  }
+  
+  .sub-containerI {
+    background-color: #f1ebf3; /* Light blue for Classroom Course */
+  }
+  
+  .sub-containerII {
+    background-color: #f1ebf3; /* Light green for Online Courses */
+  }
+  
+  /* Icon and Text Layout */
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bb6767; /* Background for the icon container */
+    padding: 10px;
+    margin-right: 20px;
+  }
+  
+  .classroom-icon {
+    color: #4caf50;
+    font-size: 4rem;
+  }
+  
+  .degree-icon {
+    color: #2196f3;
+    font-size: 4rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    color: #222;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Register Now Button */
+  .register-now {
+    text-align: center;
+  }
+  
+  .register-now button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .register-now button:hover {
+    background-color: #da3928;
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 1024px) {
+    .features-container {
+      margin-top: 0px; /* Reduce top margin for smaller devices */
+    }
+  
+    .row {
+      flex-direction: column; /* Stack row items vertically */
+      align-items: center;
+    }
+  
+    .image-container {
+      margin: 10px 0; /* Adjust spacing for mobile devices */
+    }
+  
+    .image-container img {
+      margin-left: 0;
+      margin-top: 0;
+    }
+  
+    .right-column {
+      width: 90%; /* Make right column take full width */
+      text-align: center;
+    }
+  
+    .heading-container h1 {
+      font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+  
+    .heading-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .column {
+      width: 100%; /* Ensure column fits smaller screens */
+    }
+  
+    .sub-containerI,
+    .sub-containerII {
+      width: 90%; /* Reduce container width to fit smaller devices */
+      padding: 10px;
+    }
+  
+    .register-now button {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  }
+  

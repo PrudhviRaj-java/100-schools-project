@@ -1,0 +1,234 @@
+/* General Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* First Column Styles */
+.first-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.contact-info {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Scrolling Text */
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 45%;
+  box-sizing: border-box;
+  animation: scroll-left 10s linear infinite;
+  padding: 10px;
+  background-color: #5830a9;
+  color: white;
+  text-align: center;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+/* Third Column Styles */
+.third-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 10px;
+  background-color: #a7a17c;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.menu-heading {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.download-app a {
+  color: blue;
+  text-decoration: none;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Sliding Menu */
+.sliding-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #dcd48a;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: linear 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sliding-menu.open {
+  right: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.contact-container {
+  background-color: rgb(229, 207, 152);
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.contact-container h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.contact-icon {
+  margin-right: 10px;
+}
+
+.close-menu {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .first-column {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+  }
+
+  .contact-info {
+    margin-bottom: 0;
+  }
+
+  .social-icons {
+    gap: 5px;
+  }
+
+  .menu-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .scrolling-text {
+    animation: scroll-left 10s linear infinite;
+    padding: 10px;
+  }
+
+  .third-column {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    width: 90%; /* Reduces the width */
+    max-width: 1000px; /* Optional: Limit the max width */
+    margin: 0 auto; /* Centers the content */
+  }
+}
+
+@media (max-width: 768px) {
+  .third-column {
+    display: flex;
+    justify-content: space-between; /* Keeps the logo on the left and menu icon on the right */
+    align-items: center;
+    width: 80%; /* Reduces width further */
+    max-width: 700px; /* Optional: Limit the max width */
+    margin: 0 auto; /* Centers the content */
+  }
+
+  .logo {
+    order: 1;
+    width: 50%; /* Adjusts the width of the logo */
+    max-width: 150px; /* Optional: Limit max width */
+  }
+
+  .menu-icon {
+    order: 2;
+    display: block;
+    width: 50%; /* Adjusts the width of the menu icon container */
+    max-width: 50px; /* Optional: Limit max width */
+  }
+
+  .menu-heading {
+    display: none; /* Hide menu heading */
+  }
+}
+
+@media (max-width: 480px) {
+  .third-column {
+    width: 93%; /* Further reduces width on smaller screens */
+  }
+
+  .logo {
+    width: 40%; /* Adjust the logo width */
+    max-width: 120px; /* Optional: Limit max width */
+  }
+
+  .menu-icon {
+    width: 40%; /* Adjust the menu icon width */
+    max-width: 40px; /* Optional: Limit max width */
+  }
+
+  .scrolling-text {
+    font-size: 12px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+  }
+}
